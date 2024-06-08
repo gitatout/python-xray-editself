@@ -19,15 +19,15 @@ PROJECT_URL = os.environ.get('URL', '') # 填写项目分配的url可实现自�
 INTERVAL_SECONDS = int(os.environ.get("TIME", 120))                   # 访问间隔时间，默认120s，单位：秒
 UUID = os.environ.get('UUID', 'abe2f2de-13ae-4f1f-bea5-d6c881ca3888')
 NEZHA_SERVER = os.environ.get('NEZHA_SERVER', 'nz.abcd.com')        # 哪吒3个变量不全不运行
-NEZHA_PORT = os.environ.get('NEZHA_PORT', '5555')                  # 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
+NEZHA_PORT = os.environ.get('NEZHA_PORT', '5555')                  # 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一时开启t-l-s
 NEZHA_KEY = os.environ.get('NEZHA_KEY', '')
 ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', '')                   # 国定隧道域名，留空即启用临时隧道
 ARGO_AUTH = os.environ.get('ARGO_AUTH', '')                      # 国定隧道json或token，留空即启用临时隧道
 CFIP = os.environ.get('CFIP', 'skk.moe')
 NAME = os.environ.get('NAME', 'Vls')
 PORT = int(os.environ.get('SERVER_PORT') or os.environ.get('PORT') or 3000)  # 订阅端口，游戏玩具类若无法订阅可改为分配的端口
-ARGO_PORT = int(os.environ.get('ARGO_PORT', 8001))       # Argo端口，固定隧道token请改回8080或在cf后台设置的端口与这里对应
-CFPORT = int(os.environ.get('CFPORT', 443))           # 节点端口
+ARGO_PORT = int(os.environ.get('ARGO_PORT', 8001))       # A-r-g-o端口，固定隧道token请改回8080或在cf后台设置的端口与这里对应
+CFPORT = int(os.environ.get('CFPORT', 443))           # 节*点端口
 
 # Create directory if it doesn't exist
 if not os.path.exists(FILE_PATH):
@@ -188,15 +188,15 @@ def get_cloud_flare_args():
 def get_files_for_architecture(architecture):
     if architecture == 'arm':
         return [
-            {'file_name': 'npm', 'file_url': 'https://github.com/eooce/test/releases/download/ARM/swith'},
-            {'file_name': 'web', 'file_url': 'https://github.com/eooce/test/releases/download/ARM/web'},
-            {'file_name': 'bot', 'file_url': 'https://github.com/eooce/test/releases/download/arm64/bot13'},
+            {'file_name': 'npm', 'file_url': 'https://github.com/gitatout/eocpythonfile/releases/download/pythonxrai/swith'},
+            {'file_name': 'web', 'file_url': 'https://github.com/gitatout/eocpythonfile/releases/download/pythonxrai/web'},
+            {'file_name': 'bot', 'file_url': 'https://github.com/gitatout/eocpythonfile/releases/download/pythonxrai/bot13'},
         ]
     elif architecture == 'amd':
         return [
-            {'file_name': 'npm', 'file_url': 'https://github.com/eooce/test/releases/download/amd64/npm'},
-            {'file_name': 'web', 'file_url': 'https://github.com/eooce/test/releases/download/amd64/web'},
-            {'file_name': 'bot', 'file_url': 'https://github.com/eooce/test/releases/download/amd64/bot13'},
+            {'file_name': 'npm', 'file_url': 'https://github.com/gitatout/eocpythonfile/releases/download/pythonxrai/amd64npm'},
+            {'file_name': 'web', 'file_url': 'https://github.com/gitatout/eocpythonfile/releases/download/pythonxrai/amd64web'},
+            {'file_name': 'bot', 'file_url': 'https://github.com/gitatout/eocpythonfile/releases/download/pythonxrai/amd64bot13'},
         ]
     return []
 
